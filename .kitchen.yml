@@ -31,3 +31,8 @@ suites:
     excludes: ["centos-5.10", "centos-6.5", "fedora-19"]
     run_list:
       - recipe[php::apt_ondrej_ppa]
+  - name: modules
+    excludes: ["centos-5.10", "centos-6.5", "fedora-19"]
+    run_list:
+      - recipe[php::default]
+      - recipe[php::module_mcrypt]
